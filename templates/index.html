@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>~WittyTechie</title>
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+	<div class="maindiv">
+	<div class="sco">
+		<ul id="score">
+			<li id="1">&otimes;</li>
+			<li id="2">&otimes;</li>
+			<li id="3">&otimes;</li>
+			<li id="4">&otimes;</li>
+			<li id="5">&otimes;</li>
+			<li id="6">&otimes;</li>
+		</ul>
+	</div>
+	<div class="wrapper">
+	<canvas id="canvas"></canvas>
+	</div>
+	<div class="lead">
+		<table>
+			<tr><th>Rank</th>
+				<th>Name</th>
+				<th>Score</th></tr>
+		{% set i=1 %}
+		{%for l in leader %}
+			<tr>
+				<td>{{i}}</td>
+				<td>{{l.uname}}</td>
+				<td>{{l.sc}}</td>
+			</tr>
+			{% set i= i+1 %}
+		{% endfor %}
+		</table>
+	</div>
+	<script type="text/javascript" src="/static/game.min.js"></script>
+	<div class="foot">
+		<a href="https://github.com/WittyTechie">
+		<footer>
+			&copy; Harsh Bhikadia :: harsh.bhikadiya@gmail.com :: @WittyTechie
+		</footer></a>
+	</div>
+</div>
+</body>
+</html>
